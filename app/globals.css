@@ -1,13 +1,13 @@
 :root {
-  --bg: #0c0b0a;
-  --bg-weave: #141210;
-  --ivory: #f4ecdc;
-  --ivory-dim: #b9ae98;
-  --gold: #c9a15b;
-  --gold-light: #e9d19f;
-  --line: rgba(201, 161, 91, 0.28);
-  --line-strong: rgba(201, 161, 91, 0.55);
-  --shadow: rgba(0, 0, 0, 0.55);
+  --bg: #060606;
+  --bg-weave: #0f0f0f;
+  --ivory: #f7f7f7;
+  --ivory-dim: #9c9c9c;
+  --gold: #e2e2e2;
+  --gold-light: #ffffff;
+  --line: rgba(255, 255, 255, 0.16);
+  --line-strong: rgba(255, 255, 255, 0.4);
+  --shadow: rgba(0, 0, 0, 0.65);
 
   --font-display: "Cormorant Garamond", serif;
   --font-body: "Manrope", sans-serif;
@@ -47,15 +47,15 @@ body::before {
   background:
     repeating-linear-gradient(
       45deg,
-      rgba(244, 236, 220, 0.025) 0px,
-      rgba(244, 236, 220, 0.025) 1px,
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
       transparent 1px,
       transparent 7px
     ),
     repeating-linear-gradient(
       -45deg,
-      rgba(244, 236, 220, 0.02) 0px,
-      rgba(244, 236, 220, 0.02) 1px,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
       transparent 1px,
       transparent 7px
     );
@@ -69,7 +69,7 @@ body::after {
   pointer-events: none;
   background: radial-gradient(
     ellipse at 50% -10%,
-    rgba(201, 161, 91, 0.08),
+    rgba(255, 255, 255, 0.07),
     transparent 55%
   );
 }
@@ -104,5 +104,26 @@ body::after {
   }
   to {
     transform: translateX(230%) skewX(-12deg);
+  }
+}
+
+@keyframes linkCurtain {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 26px 1px rgba(255, 255, 255, 0.16);
   }
 }

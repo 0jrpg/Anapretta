@@ -22,7 +22,7 @@ const mono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ana Pretta — Boutique Feminina",
+  title: "Ana Pretta — Loja de Roupa",
   description: "Instagram, WhatsApp, e-mail e equipe de vendas da Loja Ana Pretta.",
 };
 

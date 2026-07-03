@@ -13,10 +13,6 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <div className={styles.card}>
-        <div className={`${styles.eyebrow} reveal`} style={{ animationDelay: "0.05s" }}>
-          Boutique Feminina
-        </div>
-
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/56106095_2057093267930090_6581649038767030272_n.jpg?ccb=11-4&oh=01_Q5Aa4gHyBhNSl-9_52xkle7MvL5wdAqE-fGnwef117cKXd01PA&oe=6A22F38D&_nc_sid=5e03e0&_nc_cat=105"
@@ -40,7 +36,7 @@ export default function Home() {
         </svg>
 
         <p className={`${styles.tagline} reveal`} style={{ animationDelay: "0.3s" }}>
-          Peças escolhidas com cuidado, para vestir com presença.
+          Roupas selecionadas com cuidado, para vestir com elegância.
         </p>
 
         <nav className={`${styles.links} reveal`} style={{ animationDelay: "0.35s" }} aria-label="Links de contato">
