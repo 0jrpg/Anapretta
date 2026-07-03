@@ -1,0 +1,108 @@
+:root {
+  --bg: #0c0b0a;
+  --bg-weave: #141210;
+  --ivory: #f4ecdc;
+  --ivory-dim: #b9ae98;
+  --gold: #c9a15b;
+  --gold-light: #e9d19f;
+  --line: rgba(201, 161, 91, 0.28);
+  --line-strong: rgba(201, 161, 91, 0.55);
+  --shadow: rgba(0, 0, 0, 0.55);
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 56px 16px;
+  color: var(--ivory);
+  background: var(--bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle woven-fabric backdrop instead of a glowing blob gradient */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(244, 236, 220, 0.025) 0px,
+      rgba(244, 236, 220, 0.025) 1px,
+      transparent 1px,
+      transparent 7px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(244, 236, 220, 0.02) 0px,
+      rgba(244, 236, 220, 0.02) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% -10%,
+    rgba(201, 161, 91, 0.08),
+    transparent 55%
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: reveal 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stitchDraw {
+  from {
+    stroke-dashoffset: 320;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes shimmerSweep {
+  from {
+    transform: translateX(-130%) skewX(-12deg);
+  }
+  to {
+    transform: translateX(230%) skewX(-12deg);
+  }
+}
