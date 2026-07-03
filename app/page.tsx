@@ -64,7 +64,7 @@ export default function Home() {
 
         <div className={styles.divider} />
 
-        <details className={`${styles.accordion} reveal`} style={{ animationDelay: "0.4s" }}>
+        <details className={styles.accordion}>
           <summary className={styles.summary}>
             Equipe de vendas
             <span className={styles.plus}>+</span>
