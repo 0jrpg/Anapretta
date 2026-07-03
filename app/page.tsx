@@ -35,10 +35,6 @@ export default function Home() {
           <path d="M2 7 Q 55 -2, 110 7 T 218 7" />
         </svg>
 
-        <p className={`${styles.tagline} reveal`} style={{ animationDelay: "0.3s" }}>
-          Roupas selecionadas com cuidado, para vestir com elegância.
-        </p>
-
         <nav className={`${styles.links} reveal`} style={{ animationDelay: "0.35s" }} aria-label="Links de contato">
           <a
             href="https://www.instagram.com/ana_pretta/"

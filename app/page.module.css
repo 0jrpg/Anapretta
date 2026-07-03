@@ -97,7 +97,7 @@
 }
 
 .links {
-  margin-top: 28px;
+  margin-top: 34px;
 }
 
 .link {
@@ -117,8 +117,10 @@
   font-size: 14.5px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   transition: border-color 0.3s ease, background 0.3s ease,
-    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), letter-spacing 0.3s ease;
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), letter-spacing 0.3s ease,
+    box-shadow 0.4s ease;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -144,11 +146,7 @@
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-3px);
   letter-spacing: 0.025em;
-  animation-name: linkCurtain, glowPulse;
-  animation-duration: 0.6s, 1.7s;
-  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1), ease-in-out;
-  animation-iteration-count: 1, infinite;
-  animation-fill-mode: forwards, none;
+  box-shadow: 0 0 26px 1px rgba(255, 255, 255, 0.18);
 }
 
 .link:active {
@@ -316,7 +314,6 @@
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
-  filter: grayscale(1) contrast(1.05) brightness(0.92);
 }
 
 .mapWrap iframe {

@@ -117,13 +117,3 @@ body::after {
     opacity: 1;
   }
 }
-
-@keyframes glowPulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-  }
-  50% {
-    box-shadow: 0 0 26px 1px rgba(255, 255, 255, 0.16);
-  }
-}
